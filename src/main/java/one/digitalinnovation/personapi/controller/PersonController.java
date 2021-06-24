@@ -27,7 +27,7 @@ import java.util.List;
 public class PersonController {
     @GetMapping
     public String getBook(){
-        return "Teste";
+        return "Heroku Funcionando";
     }
 /*
     private PersonService personService;
