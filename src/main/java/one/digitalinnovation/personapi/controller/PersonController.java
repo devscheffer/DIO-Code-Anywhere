@@ -25,7 +25,11 @@ import java.util.List;
 @RequestMapping("/api/v1/people")
 @AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
-
+    @GetMapping
+    public String getBook(){
+        return "Teste";
+    }
+/*
     private PersonService personService;
 
     @PostMapping
@@ -54,4 +58,5 @@ public class PersonController {
     public void deleteById(@PathVariable Long id) throws PersonNotFoundException {
         personService.delete(id);
     }
+ */
 }

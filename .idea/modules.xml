@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/gradle-project/code_anywhere.iml" filepath="$PROJECT_DIR$/gradle-project/code_anywhere.iml" />
+      <module fileurl="file://$PROJECT_DIR$/personapi.iml" filepath="$PROJECT_DIR$/personapi.iml" />
     </modules>
   </component>
 </project>
