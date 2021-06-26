@@ -5,6 +5,7 @@ import one.digitalinnovation.personapi.dto.request.PersonDTO;
 import one.digitalinnovation.personapi.dto.response.MessageResponseDTO;
 import one.digitalinnovation.personapi.entity.Person;
 import one.digitalinnovation.personapi.exception.PersonNotFoundException;
+import one.digitalinnovation.personapi.repository.PersonRepository;
 import one.digitalinnovation.personapi.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,11 +24,23 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
-@AllArgsConstructor(onConstructor = @__(@Autowired))
+//@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
-    @GetMapping
-    public String getBook(){
-        return "Heroku Funcionando";
+
+    private PersonRepository personrepository;
+
+    @Autowired
+    public PersonController(PersonRepository personrepository) {
+        this.personrepository = personrepository;
+    }
+
+    @PostMapping
+    public MessageResponseDTO createPerson(@RequestBody Person person) {
+        Person savedPerson=personrepository.save(person);
+        return MessageResponseDTO
+                .builder()
+                .message("Create new register person with ID: " + person.getId())
+                .build();
     }
 /*
     private PersonService personService;

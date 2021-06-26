@@ -50,5 +50,24 @@ Abaixo, seguem links bem bacanas, sobre tópicos mencionados durante a aula:
 
 [Neste link](https://drive.google.com/file/d/1crVPOVl6ok2HeYjh3fjQuGQn2lDZVHrn/view?usp=sharing), seguem os slides apresentados como o roteiro utilizado para o desenvolvimento do projeto da nossa sessão.
 
+### H2
 
+```
+JDBC URL: jdbc:h2:mem:testdb
+```
 
+### Post
+
+```json
+{
+    "firstName": "teste",
+    "lastName": "teste",
+    "cpf": "1234",
+    "phones": [
+        {
+            "type": "MOBILE",
+            "number": "123"
+        }
+    ]
+}
+```
