@@ -50,6 +50,10 @@ Abaixo, seguem links bem bacanas, sobre tópicos mencionados durante a aula:
 
 [Neste link](https://drive.google.com/file/d/1crVPOVl6ok2HeYjh3fjQuGQn2lDZVHrn/view?usp=sharing), seguem os slides apresentados como o roteiro utilizado para o desenvolvimento do projeto da nossa sessão.
 
+### Boas práticas
+
+metódos publicos primeiro e depois os privados
+
 ### H2
 
 ```
@@ -79,6 +83,25 @@ parte 7
     "cpf": "369.333.878-79",
     "phones": [
         {
+            "type": "MOBILE",
+            "number": "(11)111111111"
+        }
+    ]
+}
+```
+
+### PUT
+
+```json
+{
+    "id": 1,
+    "firstName": "teste",
+    "lastName": "teste",
+    "cpf": "369.333.878-79",
+    "birthDate": "01-01-1990",
+    "phones": [
+        {
+            "id": 1,
             "type": "MOBILE",
             "number": "(11)111111111"
         }
