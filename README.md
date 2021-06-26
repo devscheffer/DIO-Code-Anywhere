@@ -57,7 +57,7 @@ JDBC URL: jdbc:h2:mem:testdb
 ```
 
 ### Post
-
+Parte 6
 ```json
 {
     "firstName": "teste",
@@ -67,6 +67,20 @@ JDBC URL: jdbc:h2:mem:testdb
         {
             "type": "MOBILE",
             "number": "123"
+        }
+    ]
+}
+```
+parte 7
+```json
+{
+    "firstName": "teste",
+    "lastName": "teste",
+    "cpf": "369.333.878-79",
+    "phones": [
+        {
+            "type": "MOBILE",
+            "number": "(11)111111111"
         }
     ]
 }

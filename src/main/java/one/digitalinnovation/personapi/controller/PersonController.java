@@ -28,18 +28,11 @@ import java.util.List;
 public class PersonController {
 
     private PersonService personService;
+
     @Autowired
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
-
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public MessageResponseDTO createPerson(@RequestBody Person person) {
-    return personService.createPerson(person);
-    }
-/*
-    private PersonService personService;
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
@@ -56,7 +49,8 @@ public class PersonController {
     public PersonDTO findById(@PathVariable Long id) throws PersonNotFoundException {
         return personService.findById(id);
     }
-
+}
+/*
     @PutMapping("/{id}")
     public MessageResponseDTO updateById(@PathVariable Long id, @RequestBody @Valid PersonDTO personDTO) throws PersonNotFoundException {
         return personService.updateById(id, personDTO);
@@ -68,4 +62,4 @@ public class PersonController {
         personService.delete(id);
     }
  */
-}
+
