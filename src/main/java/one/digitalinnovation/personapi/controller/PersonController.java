@@ -27,20 +27,16 @@ import java.util.List;
 //@AllArgsConstructor(onConstructor = @__(@Autowired))
 public class PersonController {
 
-    private PersonRepository personrepository;
-
+    private PersonService personService;
     @Autowired
-    public PersonController(PersonRepository personrepository) {
-        this.personrepository = personrepository;
+    public PersonController(PersonService personService) {
+        this.personService = personService;
     }
 
     @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
     public MessageResponseDTO createPerson(@RequestBody Person person) {
-        Person savedPerson=personrepository.save(person);
-        return MessageResponseDTO
-                .builder()
-                .message("Create new register person with ID: " + person.getId())
-                .build();
+    return personService.createPerson(person);
     }
 /*
     private PersonService personService;
